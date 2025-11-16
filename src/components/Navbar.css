@@ -1,0 +1,41 @@
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(90deg, #347aeb, #347aeb); /* สีเข้มไล่โทน */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #f1f5f9;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links .btn-register {
+  background-color: #09b643;
+  color: #ffffff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.nav-links .btn-register:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
+}

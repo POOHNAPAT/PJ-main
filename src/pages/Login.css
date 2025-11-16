@@ -1,0 +1,201 @@
+/* พื้นหลัง */
+.auth-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #d7e9ff, #7db0ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  50% { transform: translate(-50%, -50%) rotate(180deg); }
+}
+
+/* กล่องตรงกลาง */
+.auth-box {
+  width: 900px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+
+/* สองฝั่ง */
+.auth-side {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ฝั่งน้ำเงิน */
+.blue-side {
+  background: #7db0ff;
+  color: white;
+}
+
+.blue-side .switch-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+/* ฟอร์ม */
+.form-side input {
+  width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 15px;
+  background: rgba(240, 240, 240, 0.8);
+  color: black;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.form-side input:focus {
+  border-color: #7db0ff;
+  box-shadow: 0 0 8px rgba(125, 176, 255, 0.5);
+  outline: none;
+  transform: scale(1.02);
+}
+
+.login-btn {
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(45deg, #7db0ff, #5a9eff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #5a9eff, #7db0ff);
+  transform: translateY(-2px);
+}
+
+/* ปุ่มสลับ */
+.switch-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+  color: #7db0ff;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.switch-btn:hover {
+  background: #7db0ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ปุ่มกลับ */
+.back-btn {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: #7db0ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* หัวข้อ Log in */
+.form-side h1 {
+  color: black;
+}
+
+.forgot {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Social icons */
+.social {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.icons span {
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.facebook {
+  background-color: #1877f2;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facebook:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(24, 119, 242, 0.3);
+}
+
+.google {
+  background-color: #db4437;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(219, 68, 55, 0.3);
+}
+
+.apple {
+  background-color: #000000;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apple:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
