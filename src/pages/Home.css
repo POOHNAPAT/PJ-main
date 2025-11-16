@@ -73,7 +73,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #4a90e2, #357abd); /* Adjusted blue gradient for a softer, more modern look */
+  background: linear-gradient(135deg, #7db0ff, #7db0ff); /* Adjusted blue gradient for a softer, more modern look */
   color: white;
   padding: 10px 550px;
   text-align: center;
