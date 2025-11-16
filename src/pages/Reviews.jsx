@@ -14,6 +14,7 @@ function Reviews() {
           <a href="#search">ค้นหาสถานีชาร์จทั้งหมดในปัจจุบัน</a>
           <a href="#contact">ติดต่อเรา</a>
           <span className="flag">🇹🇭</span>
+          <a href="/dashboard" className="profile-icon">👤</a>
         </nav>
       </header>
 
