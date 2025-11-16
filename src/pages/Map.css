@@ -1,11 +1,16 @@
-ด้านบนสุดให้เปีเทา/* Header */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: #f0f0f0; /* Changed to gray as requested */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed; /* Added for full-screen fit */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -42,7 +47,7 @@
 
 .nav a:hover {
   color: #007bff;
-  background-color: #f0f0f0;
+  background-color: #e0e0e0; /* Adjusted hover to match gray theme */
 }
 
 .flag {
@@ -50,19 +55,25 @@
 }
 
 .map-page {
-  padding: 20px;
+  width: 400%; /* Added for 100% width */
+  min-height: 100vh; /* Added for full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
+  padding-top: 80px; /* Added to account for fixed header */
 }
 
 .map-container {
   width: 100%;
-  height: 600px;
+  height: 60vh; /* Adjusted to 60% of viewport height for better fit */
   border: 1px solid #ccc;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f0f0f0;
+  flex: 1; /* Added to fill remaining space */
 }
 
 .map-placeholder {
@@ -80,6 +91,7 @@
   color: white;
   padding: 20px 0;
   text-align: center;
+  width: 100%; /* Added for 100% width */
 }
 
 .footer-content {
@@ -102,4 +114,30 @@
 
 .charger-type:hover {
   background-color: #0056b3;
+}
+
+/* Responsive adjustments for 100% fit */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .map-page {
+    padding-top: 100px; /* Adjust for smaller screens */
+  }
+
+  .map-container {
+    height: 50vh;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
